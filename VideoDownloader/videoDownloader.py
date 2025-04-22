@@ -24,6 +24,6 @@ def download_playlist(url, output_path):
 
     with youtube.YoutubeDL(ydl_opts) as ydl:
         info = ydl.extract_info(url, download=False)
-        print(f"Playlist Title: {info:['title']}")
+        print(f"Playlist Title: {info['title']}")
         ydl.download([url])
         print(f"Download da playlist concluído: {info.get('title', 'Playlist')}")
